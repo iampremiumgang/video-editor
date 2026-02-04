@@ -1,5 +1,5 @@
 {
-  "name": "Lumina Video Editor",
+  "name": "Lumina Pro",
   "description": "A professional, timeline-based video editor for the web featuring multi-track editing, filters, keyframes, and export capabilities similar to VN and CapCut.",
   "requestFramePermissions": [
     "microphone"

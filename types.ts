@@ -1,3 +1,4 @@
+
 export enum ClipType {
   VIDEO = 'VIDEO',
   AUDIO = 'AUDIO',
@@ -29,11 +30,14 @@ export interface Clip {
   duration: number; // How long it plays (seconds)
   trackId: number;
   src?: string;
+  waveform?: number[]; // Array of normalized peaks (0 to 1)
   
   // Visual Properties
   opacity: number;
   scale: number;
   rotation: number;
+  x: number; // Horizontal position offset (px)
+  y: number; // Vertical position offset (px)
   volume: number;
   speed: number;
   
@@ -44,11 +48,21 @@ export interface Clip {
   blur: number; // px
   grayscale: number; // 0-1
   sepia: number; // 0-1
+  hueRotate: number; // degrees
 
   // Transitions
   fadeIn: number; // seconds
   fadeOut: number; // seconds
   
+  // Style properties for Text
+  fontFamily?: string;
+  fontSize?: number;
+  color?: string;
+  backgroundColor?: string;
+  textAlign?: 'left' | 'center' | 'right';
+  fontWeight?: string;
+  textShadow?: string;
+
   keyframes: Keyframe[];
 }
 
